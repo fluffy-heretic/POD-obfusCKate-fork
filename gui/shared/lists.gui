@@ -1956,8 +1956,7 @@ types Lists
 									onclick = "[ToggleGameViewData( 'tax_slot_assign_vassal', Character.Self )]"
 
 									background = {
-										#TODO:this should only be visible if this character is not being taxed
-										visible = no
+										visible = "[Not( Character.IsAssignedAsTaxpayer )]"
 										texture = "gfx/interface/colors/red.dds"
 										alpha = 0.2
 							
@@ -1991,16 +1990,19 @@ types Lists
 										text = "TAX_SLOT_REALM_VIEW_OPEN_ASSIGN_VIEW_UNASSIGNED"
 									}
 
-							text_single = { # Display the usual Levy and Tax for Feudal
-								visible = "[Character.GetGovernment.IsType('feudal_government')]"
-								layoutpolicy_horizontal = expanding
-								text = "MY_REALM_WINDOW_VASSAL_OBLIGATION"
-								default_format = "#low"
-								align = nobaseline
+									icon = {
+										parentanchor = vcenter|right
+										size = { 30 30 }
+										position = { -5 0 }
+										texture = "gfx/interface/icons/flat_icons/replace.dds"
+										using = Master_Button_Modify_Texture
+									}
+								}
 							}
 
-							text_single = { # Display the government type for non Feudal
-								visible = "[Not(Character.GetGovernment.IsType('feudal_government'))]"
+
+							text_single = { # Display the government type
+								visible = "[And(Not(Character.GetGovernment.IsType('feudal_government')),Not(Character.GetGovernment.IsType('clan_government')))]"
 								text = "[Character.GetGovernment.GetName]"
 								align = nobaseline
 							}
