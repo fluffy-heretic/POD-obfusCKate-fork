@@ -1,0 +1,10 @@
+﻿l_english:
+ 
+ POD_COTERIE_BREAKDOWN:1 "#T [ROOT.Char.Custom('PODCoterie')]: [ROOT.Char.Custom('PODGetCoterieName')]#!\n@skill_diplomacy_icon![diplomacy|E]: $PODOBF_coterie_diplomacy$\n@skill_martial_icon![martial|E]: $PODOBF_coterie_martial$\n@skill_stewardship_icon![stewardship|E]: $PODOBF_coterie_stewardship$\n@skill_intrigue_icon![intrigue|E]: $PODOBF_coterie_intrigue$\n@skill_learning_icon![learning|E]: $PODOBF_coterie_learning$\n@skill_prowess_icon![prowess|E]: $PODOBF_coterie_prowess$"
+ 
+ PODOBF_coterie_diplomacy:1 "[OBFKnownSkill(SCOPE.ScriptValue('coterie_diplomacy_gui'))]"
+ PODOBF_coterie_martial:1 "[OBFKnownSkill(SCOPE.ScriptValue('coterie_martial_gui'))]"
+ PODOBF_coterie_stewardship:1 "[OBFKnownSkill(SCOPE.ScriptValue('coterie_stewardship_gui'))]"
+ PODOBF_coterie_intrigue:1 "[OBFKnownSkill(SCOPE.ScriptValue('coterie_intrigue_gui'))]"
+ PODOBF_coterie_learning:1 "[OBFKnownSkill(SCOPE.ScriptValue('coterie_learning_gui'))]"
+ PODOBF_coterie_prowess:1 "[OBFKnownSkill(SCOPE.ScriptValue('coterie_prowess_gui'))]"
